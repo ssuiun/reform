@@ -10,7 +10,7 @@ class Links(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.new_link:
-            self.new_link = self.get_code()
+            self.new_link = self.get_url()
         super(Links, self).save(*args, **kwargs)
 
     def get_url(self):

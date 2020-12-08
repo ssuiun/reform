@@ -37,7 +37,7 @@
       {% for link in links%}
           <div class="card d-flex justify-content-center align-items-center container" style="width: 18rem;">
             <div class="card-body">
-              <a href="{% url 'app:redirect' new_link=link.new_link %}" class="card-link">{{ link.new_link }}</a>
+              <a href="{% url 'app:redirect' new_link=link.new_link %}" class="card-link">{{host}}/{{ link.new_link }}</a>
             </div>
           </div>
       {% endfor %}
